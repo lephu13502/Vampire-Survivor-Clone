@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //Movement
-    [SerializeField] private float moveSpeed;
-
     [HideInInspector]
     public Vector2 moveDir;
     [HideInInspector]
@@ -18,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     //References
     private Rigidbody2D rb;
+    public CharacterSO characterData;
 
     private void Start()
     {
@@ -57,6 +56,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Move()
     {
-        rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
+        rb.velocity = new Vector2(moveDir.x * characterData.MoveSpeed, moveDir.y * characterData.MoveSpeed);
     }
 }

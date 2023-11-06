@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class ProjectileWeaponBehaviour : MonoBehaviour
 {
+    [SerializeField] private float destroyAfterSeconds;
+
     public WeaponSO weaponData;
 
     protected Vector3 direction;
 
-    [SerializeField] private float destroyAfterSeconds;
+    protected float currentDamage;
+    protected float currentSpeed;
+    protected float currentCooldownDuration;
+    protected int currentPierce;
+
+    private void Awake()
+    {
+        currentDamage = weaponData.Damage;
+        currentSpeed = weaponData.Speed;
+        currentCooldownDuration = weaponData.CooldownDuration;
+        currentPierce = weaponData.Pierce;
+    }
 
     protected virtual void Start()
     {
@@ -58,5 +71,31 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         }
         transform.localScale = scale;
         transform.rotation = Quaternion.Euler(rotation);
+    }
+    protected virtual void OnTriggerEnter2D(Collider2D col)
+    {
+        //Reference the script from the collided collider and deal damage using TakeDamage()
+        if (col.CompareTag("Enemy"))
+        {
+            EnemyStats enemy = col.GetComponent<EnemyStats>();
+            enemy.TakeDamage(currentDamage);
+            ReducePierce();
+        }
+        else if (col.CompareTag("Prop"))
+        {
+            if (col.gameObject.TryGetComponent(out BreakbleProps breakable))
+            {
+                breakable.TakeDamage(currentDamage);
+                ReducePierce();
+            }
+        }
+    }
+    void ReducePierce() //Destroy once the pierce reaches 0
+    {
+        currentPierce--;
+        if (currentPierce <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
