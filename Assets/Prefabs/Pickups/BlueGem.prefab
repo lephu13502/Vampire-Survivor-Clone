@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 764455673092807866}
   - component: {fileID: 399434811264475953}
   - component: {fileID: 3203105512892870717}
+  - component: {fileID: 4804285194630154727}
   m_Layer: 0
   m_Name: BlueGem
   m_TagString: Untagged
@@ -134,3 +135,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expGranted: 100
+--- !u!50 &4804285194630154727
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275420141551561632}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

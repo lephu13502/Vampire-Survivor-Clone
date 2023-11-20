@@ -16,11 +16,12 @@ public class PlayerMovement : MonoBehaviour
 
     //References
     private Rigidbody2D rb;
-    public CharacterSO characterData;
+    PlayerStats player;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GetComponent<PlayerStats>();
         lastMovedVector = new Vector2(1, 0f);
     }
 
@@ -56,6 +57,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Move()
     {
-        rb.velocity = new Vector2(moveDir.x * characterData.MoveSpeed, moveDir.y * characterData.MoveSpeed);
+        rb.velocity = new Vector2(moveDir.x * player.currentMoveSpeed, moveDir.y * player.currentMoveSpeed);
     }
 }
