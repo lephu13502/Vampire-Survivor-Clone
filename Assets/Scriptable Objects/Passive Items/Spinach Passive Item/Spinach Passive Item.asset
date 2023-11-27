@@ -16,3 +16,5 @@ MonoBehaviour:
   level: 1
   nextLevelPrefab: {fileID: 6061610781295604756, guid: e3b15093cee17284baa41c55948d5423, type: 3}
   icon: {fileID: 1895510185, guid: ea827df23e81cd44d9bba6f6361fa50d, type: 3}
+  name: Spinach
+  description: Increses Might by 100%

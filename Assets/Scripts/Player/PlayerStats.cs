@@ -153,8 +153,8 @@ public class PlayerStats : MonoBehaviour
         CurrentMagnet = characterData.Magnet;
 
         SpawnWeapon(characterData.StartingWeapon);
-        SpawnWeapon(secondWeaponTest);
-        SpawnPassiveItem(firstPITest);
+        //SpawnWeapon(secondWeaponTest);
+        //SpawnPassiveItem(firstPITest);
         SpawnPassiveItem(secondPITest);
     }
 
@@ -205,6 +205,8 @@ public class PlayerStats : MonoBehaviour
                 }
             }
             expCap += expCapIncrease;
+
+            GameManager.Instance.StartLevelUp();
         }
     }
     public void TakeDamage(float damage)
