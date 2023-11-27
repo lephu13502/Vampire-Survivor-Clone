@@ -18,12 +18,22 @@ public class GameManager : MonoBehaviour
     public GameState previousState;
 
     public GameObject pauseScreen;
+    public GameObject resultScreen;
+
     public Text currentHealthDisplay;
     public Text currentRecoveryDisplay;
     public Text currentMoveSpeedDisplay;
     public Text currentMightDisplay;
     public Text currentProjectileSpeedDisplay;
     public Text currentMagnetDisplay;
+
+    public Image chosenCharacterImage;
+    public Text chosenCharacterName;
+    public Text levelReachedDisplay;
+    public List<Image> chosenWeaponUI = new List<Image>(6);
+    public List<Image> chosenItemUI = new List<Image>(6);
+
+    public bool isGameOver = false;
 
     private void Awake()
     {
@@ -50,6 +60,13 @@ public class GameManager : MonoBehaviour
                 CheckForPauseAndResume();
                 break;
             case GameState.GameOver:
+                if (!isGameOver)
+                {
+                    isGameOver = true;
+                    Time.timeScale = 0f;
+                    Debug.Log("GAME IS OVER");
+                    DisplayResults();
+                }
                 break;
             default:
                 Debug.Log("State doesn't exist");
@@ -102,5 +119,58 @@ public class GameManager : MonoBehaviour
     void DisableScreen()
     {
         pauseScreen.SetActive(false);
+        resultScreen.SetActive(false);
+    }
+
+    public void GameOver()
+    {
+        ChangeState(GameState.GameOver);
+    }
+
+    void DisplayResults()
+    {
+        resultScreen.SetActive(true);
+    }
+
+    public void AssignChosenCharacterUI(CharacterSO chosenCharacterData)
+    {
+        chosenCharacterImage.sprite = chosenCharacterData.Icon;
+        chosenCharacterName.text = chosenCharacterData.name;
+    }
+    public void AssignLevelReachedUI(int levelReachedData)
+    {
+        levelReachedDisplay.text = levelReachedData.ToString();
+    }
+    public void AssignChosenWeaponAndItemUI(List<Image> chosenWeaponData, List<Image> chosenItemData)
+    {
+        if (chosenWeaponData.Count != chosenWeaponUI.Count || chosenItemData.Count != chosenItemUI.Count)
+        {
+            Debug.Log("Lists have different lengths");
+            return;
+        }
+        for (int i = 0; i < chosenWeaponUI.Count; i++)
+        {
+            if (chosenWeaponData[i].sprite)
+            {
+                chosenWeaponUI[i].enabled = true;
+                chosenWeaponUI[i].sprite = chosenWeaponData[i].sprite;
+            }
+            else
+            {
+                chosenWeaponUI[i].enabled = false;
+            }
+        }
+        for (int i = 0; i < chosenItemUI.Count; i++)
+        {
+            if (chosenItemData[i].sprite)
+            {
+                chosenItemUI[i].enabled = true;
+                chosenItemUI[i].sprite = chosenItemData[i].sprite;
+            }
+            else
+            {
+                chosenItemUI[i].enabled = false;
+            }
+        }
     }
 }

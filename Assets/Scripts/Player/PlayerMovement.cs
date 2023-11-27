@@ -35,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private void InputManager()
     {
+        if (GameManager.Instance.isGameOver)
+        {
+            return;
+        }
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
@@ -57,6 +62,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Move()
     {
+        if (GameManager.Instance.isGameOver)
+        {
+            return;
+        }
         rb.velocity = new Vector2(moveDir.x * player.CurrentMoveSpeed, moveDir.y * player.CurrentMoveSpeed);
     }
 }
