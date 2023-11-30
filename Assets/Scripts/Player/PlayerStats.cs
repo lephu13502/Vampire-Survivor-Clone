@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.U2D.Animation;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -142,7 +143,7 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] private Image healthBar;
     [SerializeField] private Image expBar;
-    [SerializeField] private Text levelText;
+    [SerializeField] private TMP_Text levelText;
 
     private void Awake()
     {
