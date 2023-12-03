@@ -4467,7 +4467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23529412, g: 0.23529412, b: 0.23529412, a: 0.392}
+  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8617,6 +8617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb749f6054047e64aacc9ba0c9809ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageEffect: {fileID: 8512942862183618231, guid: c103980547b3b5549bf68030a517c3cd, type: 3}
   exp: 0
   level: 1
   expCap: 0
@@ -8630,9 +8631,6 @@ MonoBehaviour:
     expCapIncrease: 200
   weaponIndex: 0
   passiveItemIndex: 0
-  secondWeaponTest: {fileID: 5023812136063589209, guid: b76580e548bccc24982700e7b08c3545, type: 3}
-  firstPITest: {fileID: 6061610781295604756, guid: 293f7cc73317a844885244a62cb30e05, type: 3}
-  secondPITest: {fileID: 7415884505049223174, guid: f9a4049f06658d44daf26a396d12ad57, type: 3}
   healthBar: {fileID: 743813041}
   expBar: {fileID: 1602789685}
   levelText: {fileID: 811906848}
@@ -8709,6 +8707,8 @@ MonoBehaviour:
     upgradeDescriptionDisplay: {fileID: 889375861}
     upgradeIcon: {fileID: 485540253}
     upgradeButton: {fileID: 1484748120}
+  weaponEvolutions:
+  - {fileID: 11400000, guid: cffa76b4ded422544957f2b42eca4de0, type: 2}
 --- !u!1 &1787504980
 GameObject:
   m_ObjectHideFlags: 0
@@ -10535,6 +10535,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128389745}
   m_CullTransparentMesh: 1
+--- !u!1001 &2946202491428137745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342741090908604366, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636476422730405704, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
+      propertyPath: m_Name
+      value: Treasure Chest
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4eca5d8959821b45987efee5d4a8573, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -10549,3 +10606,4 @@ SceneRoots:
   - {fileID: 1249471733}
   - {fileID: 1906544398}
   - {fileID: 1686323462}
+  - {fileID: 2946202491428137745}

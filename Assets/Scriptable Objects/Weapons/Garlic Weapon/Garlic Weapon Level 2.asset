@@ -19,6 +19,7 @@ MonoBehaviour:
   pierce: 0
   level: 2
   nextLevelPrefab: {fileID: 5023812136063589209, guid: a97af309e9d30f94fae51a4104c29071, type: 3}
-  icon: {fileID: -943425077, guid: ea827df23e81cd44d9bba6f6361fa50d, type: 3}
+  icon: {fileID: 21300000, guid: 214357eaa41ed4244be507d8f4a29bae, type: 3}
   name: Garlic Level 2
   description: Cooldown is reduced by 16.7%
+  evolvedUpgradeToRemove: 0

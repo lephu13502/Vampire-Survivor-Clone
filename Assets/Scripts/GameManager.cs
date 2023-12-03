@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour
                 {
                     isGameOver = true;
                     Time.timeScale = 0f;
-                    Debug.Log("GAME IS OVER");
                     DisplayResults();
                 }
                 break;
@@ -85,7 +84,6 @@ public class GameManager : MonoBehaviour
                 {
                     choosingUpgrade = true;
                     Time.timeScale = 0f;
-                    Debug.Log("Upgrade");
                     levelUpScreen.SetActive(true);
                 }
                 break;
@@ -118,7 +116,6 @@ public class GameManager : MonoBehaviour
             ChangeState(previousState);
             Time.timeScale = 1f;
             pauseScreen.SetActive(false);
-            Debug.Log("Game is resumed");
         }
     }
 

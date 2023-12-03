@@ -17,6 +17,8 @@ public class PlayerStats : MonoBehaviour
     private float currentProjectileSpeed;
     private float currentMagnet;
 
+    public ParticleSystem damageEffect;
+
     #region Current Stats Properties
     public float CurrentHealth
     {
@@ -137,10 +139,6 @@ public class PlayerStats : MonoBehaviour
     public int weaponIndex;
     public int passiveItemIndex;
 
-    public GameObject secondWeaponTest;
-    public GameObject firstPITest;
-    public GameObject secondPITest;
-
     [SerializeField] private Image healthBar;
     [SerializeField] private Image expBar;
     [SerializeField] private TMP_Text levelText;
@@ -159,9 +157,6 @@ public class PlayerStats : MonoBehaviour
         CurrentMagnet = characterData.Magnet;
 
         SpawnWeapon(characterData.StartingWeapon);
-        //SpawnWeapon(secondWeaponTest);
-        //SpawnPassiveItem(firstPITest);
-        SpawnPassiveItem(secondPITest);
     }
 
     private void Start()
@@ -237,6 +232,12 @@ public class PlayerStats : MonoBehaviour
         if (!isInvincible)
         {
             CurrentHealth -= damage;
+
+            if (damageEffect)
+            {
+                Instantiate(damageEffect, transform.position, Quaternion.identity);
+            }
+
             invincibleTimer = invincibleDur;
             isInvincible = true;
             if (CurrentHealth <= 0)

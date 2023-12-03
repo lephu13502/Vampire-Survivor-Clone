@@ -45,4 +45,8 @@ public class WeaponSO : ScriptableObject
     [SerializeField]
     string description;
     public string Description { get => description; private set => description = value; }
+
+    [SerializeField]
+    int evolvedUpgradeToRemove;
+    public int EvolvedUpgradeToRemove { get => evolvedUpgradeToRemove; private set => evolvedUpgradeToRemove = value; }
 }
