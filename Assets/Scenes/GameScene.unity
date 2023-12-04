@@ -7898,6 +7898,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   previousState: 0
+  damageTextCanvas: {fileID: 1249471732}
+  textFontSize: 20
+  textFont: {fileID: 11400000, guid: ac36fdc6b6a8d0841897e7449c9976d2, type: 2}
+  referenceCamera: {fileID: 519420031}
   pauseScreen: {fileID: 1690291817}
   resultScreen: {fileID: 244622595}
   levelUpScreen: {fileID: 821491289}

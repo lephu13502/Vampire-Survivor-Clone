@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d3a570f1615ca54e9c86de5c8cd64dd
+guid: eed1b0f8c0f81044da2c06cb83831b51
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -51,7 +51,7 @@ TextureImporter:
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 1
+  alphaUsage: 2
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Particle Sprite Sheet_0
+      name: mist-particles_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 34
+        y: 33
         width: 32
-        height: 30
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7b002078e1a65e4195cd5e7d820da78
-      internalID: 1706590838
+      spriteID: ef787c2effcb8214e86f7f67b36f83bd
+      internalID: 339692148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Particle Sprite Sheet_1
+      name: mist-particles_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 34
-        width: 31
-        height: 30
+        y: 33
+        width: 32
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7429065d5104fd4b8de7c540df1c218
-      internalID: -87130536
+      spriteID: 986bc793a1d0348499c7d374df4dea30
+      internalID: -851815537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Particle Sprite Sheet_2
+      name: mist-particles_2
       rect:
         serializedVersion: 2
         x: 0
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f355b55d1c29084f820bff7174c0ffb
-      internalID: 2105060134
+      spriteID: 3da696681cb986a4583792b824171bd3
+      internalID: -734783363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Particle Sprite Sheet_3
+      name: mist-particles_3
       rect:
         serializedVersion: 2
         x: 32
@@ -226,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c34dc1d1f790f941978e9f053887a32
-      internalID: 1685584677
+      spriteID: 14903c2dd46687b4b92c7d47da943b77
+      internalID: -176332430
       vertices: []
       indices: 
       edges: []
@@ -243,10 +243,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Particle Sprite Sheet_0: 1706590838
-      Particle Sprite Sheet_1: -87130536
-      Particle Sprite Sheet_2: 2105060134
-      Particle Sprite Sheet_3: 1685584677
+      mist-particles_0: -186139915
+      mist-particles_1: 1361773152
+      mist-particles_2: 339692148
+      mist-particles_3: -851815537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
