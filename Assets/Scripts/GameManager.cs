@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour
     public static void GenerateFloatingText(string text, Transform target, float duration = 1f, float speed = 1f)
     {
         if (!Instance.damageTextCanvas) return;
+        //if (!target) return;
 
         if (!Instance.referenceCamera) Instance.referenceCamera = Camera.main;
 
@@ -127,11 +128,19 @@ public class GameManager : MonoBehaviour
         float yOffset = 0;
         while (t < duration)
         {
+            tmPro.color = new Color(tmPro.color.r, tmPro.color.g, tmPro.color.b, 1 - t / duration);
+            if (target)
+            {
+                yOffset += speed * Time.deltaTime;
+                rect.position = referenceCamera.WorldToScreenPoint(target.position + new Vector3(0, yOffset));
+            }
+            else
+            {
+                // If target is dead, just pan up where the text is at.
+                rect.position += new Vector3(0, speed * Time.deltaTime, 0);
+            }
             yield return w;
             t += Time.deltaTime;
-            tmPro.color = new Color(tmPro.color.r, tmPro.color.g, tmPro.color.b, 1 - t / duration);
-            yOffset += speed * Time.deltaTime;
-            rect.position = referenceCamera.WorldToScreenPoint(target.position + new Vector3(0, yOffset));
         }
     }
 
